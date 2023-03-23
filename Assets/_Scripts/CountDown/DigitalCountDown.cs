@@ -32,7 +32,20 @@ public class DigitalCountDown : MonoBehaviour
     //---------------------------------
     void Update ()
     {
-        // get seconds remaining (as a whole number)
+        /* get seconds remaining (as a whole number)
+         countdownTimerDuration = 10
+         Start() = countdownTimerStartTime = Time.time = 08:28:30; 
+         Update() elapsedSeconds = (int)(Time.time - countdownTimerStartTime);
+                  elapsedSeconds = (int)(08:28:31 - 08:28:30); = 1
+                  elapsedSeconds = (int)(08:28:32 - 08:28:30); = 2
+                  elapsedSeconds = (int)(08:28:33 - 08:28:30); = 3
+                  
+                  Seconds Left = (countdownTimerDuration - elapsedSeconds);
+                  Seconds Left = ( 10 - 1 ); = 9
+                  Seconds Left = ( 10 - 2 ); = 8
+                  Seconds Left = ( 10 - 3 ); = 7
+        */
+        
         int timeRemaining = _countdownTimer.GetSecondsRemaining();
 
         // get message based on seconds left
@@ -50,7 +63,7 @@ public class DigitalCountDown : MonoBehaviour
             return "countdown has finished";
         } else {
             // if 1 or more seconds left then build String message of seconds left
-            return "Countdown seconds remaining = " + secondsLeft;
+            return "Countdown seconds remaining:\n" + secondsLeft;
         }
     }
 }
