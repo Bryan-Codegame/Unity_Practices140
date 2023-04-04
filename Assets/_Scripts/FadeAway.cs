@@ -10,7 +10,7 @@ public class FadeAway : MonoBehaviour
     [SerializeField] Text textUI;
 
     // number of seconds before text completely fades away ...
-    private int startSeconds = 2;
+    [SerializeField]private int startSeconds = 2;
 
     //---------------------------------
     void Awake ()
@@ -62,12 +62,13 @@ public class FadeAway : MonoBehaviour
         textUI.text = message;
     }
     
-    //TODO Evitar que se vaya a numeros negativos el alfa
+    
     private string TimerMessage(int secondsLeft)
     {   
 	    // if no seconds left, return timer finished message
-	    if (secondsLeft < 0){
-		    return "countdown has finished";
+	    if (secondsLeft < 0)
+	    {
+		    return "00";
 	    } else {
 		    // if 1 or more seconds left then build String message of seconds left
 		    return secondsLeft.ToString();
