@@ -30,9 +30,9 @@ public class FadeAway : MonoBehaviour
 	    
 	    //We don't need this code, it´s just for demonstration.
 	    //Try to change this code with another material color and will see that all of your components will set their color.
-	    Color color = textUI.material.color;
+	    /*Color color = textUI.material.color;
 	    color.a = 1.0f;
-	    textUI.material.color = color;
+	    textUI.material.color = color;*/
 	    
     	_countdownTimer.ResetTimer(startSeconds);
         
