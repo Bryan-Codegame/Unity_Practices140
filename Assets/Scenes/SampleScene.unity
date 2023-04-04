@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textUI: {fileID: 759063587}
+  startSeconds: 8
 --- !u!1 &883202742
 GameObject:
   m_ObjectHideFlags: 0
